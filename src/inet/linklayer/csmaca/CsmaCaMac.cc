@@ -15,11 +15,12 @@
 // along with this program; if not, see <http://www.gnu.org/licenses/>.
 //
 
+#include "inet/common/checksum/EthernetCRC.h"
+#include "inet/common/IProtocolRegistrationListener.h"
 #include "inet/common/ModuleAccess.h"
+#include "inet/common/packet/chunk/ByteCountChunk.h"
 #include "inet/common/ProtocolGroup.h"
 #include "inet/common/ProtocolTag_m.h"
-#include "inet/common/checksum/EthernetCRC.h"
-#include "inet/common/packet/chunk/ByteCountChunk.h"
 #include "inet/linklayer/common/InterfaceTag_m.h"
 #include "inet/linklayer/common/MacAddressTag_m.h"
 #include "inet/linklayer/common/UserPriority.h"
@@ -97,6 +98,8 @@ void CsmaCaMac::initialize(int stage)
         numReceived = 0;
         numSentBroadcast = 0;
         numReceivedBroadcast = 0;
+
+        registerService(Protocol::csmaCaMac, gate("upperLayerIn"), gate("upperLayerOut"));
 
         // initialize watches
         WATCH(fsm);
