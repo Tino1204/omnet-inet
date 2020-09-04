@@ -1,5 +1,5 @@
 //
-// Copyright (C) 2004 Andras Varga
+// Copyright (C) 2004 OpenSim Ltd.
 // Copyright (C) 2009-2011 Thomas Reschka
 // Copyright (C) 2011 OpenSim Ltd.
 // Copyright (C) 2015 Martin Becke

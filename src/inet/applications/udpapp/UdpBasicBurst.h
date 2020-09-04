@@ -1,5 +1,5 @@
 //
-// Copyright (C) 2004 Andras Varga
+// Copyright (C) 2004 OpenSim Ltd.
 // Copyright (C) 2000 Institut fuer Telematik, Universitaet Karlsruhe
 // Copyright (C) 2011 OpenSim Ltd.
 //
